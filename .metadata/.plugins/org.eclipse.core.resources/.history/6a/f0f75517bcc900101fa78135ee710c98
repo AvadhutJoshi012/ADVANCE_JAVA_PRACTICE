@@ -1,0 +1,51 @@
+package com.JDBC_Practice;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class InsertData {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		String url="jdbc:mysql://localhost:3306/servlets";
+		String user="root";
+		String password="MySQL#012AJ";
+		Connection con=null;
+		PreparedStatement ps=null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			con=DriverManager.getConnection(url,user,password);
+			
+			System.out.println("Enter Student ID: ");
+			int id=sc.nextInt();
+			
+			System.out.println("Enter Student Name: ");
+			String name=sc.nextLine();
+			sc.nextLine();
+			System.out.println("Enter Student Marks: ");
+			int marks=sc.nextInt();
+			
+			String insert="INSERT INTO STUDENT(id,name,marks) VALUES(?,?,?)";
+			ps=con.prepareStatement(insert);
+			
+			ps.setInt(1, id);
+			ps.setString(2, name);
+			ps.setInt(3, marks);
+			
+			int rows=ps.executeUpdate();
+			System.out.println(rows+" record inserted Successfully.");
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.JDBC_Demo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class ConnectJDBC {
+
+	public static void main(String[] args) {
+		Connection con = null;
+		String url = "jdbc:mysql://localhost:3306/servlets";
+		String user = "root";
+		String password = "MySQL#012AJ";
+		String sql = "INSERT INTO STUDENT(id,name,marks) VALUES(?,?,?)";
+		PreparedStatement ps = null;
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con = DriverManager.getConnection(url, user, password);
+			System.out.println("Connected Successfully.");
+
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, 1);
+			ps.setString(2, "Ram");
+			ps.setInt(3, 90);
+			System.out.println("Data Inserted...!");
+		} catch (ClassNotFoundException | SQLException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+}

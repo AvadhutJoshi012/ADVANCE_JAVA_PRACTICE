@@ -1,0 +1,31 @@
+package com.Servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/register")
+public class RegisterServlet extends HttpServlet {
+	
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		
+		res.setContentType("text/html");
+		
+		PrintWriter out=res.getWriter();
+		
+		String Name=req.getParameter("name");
+		String Email=req.getParameter("email");
+		String Password=req.getParameter("password");
+		
+		out.println("<h2>Registration Successfully</h2>");
+		out.println("<p>Name: "+Name+"</p>");
+		out.println("<p>Email: "+Email+"</p>");
+		out.println("<p>Password: "+Password+"</p>");
+		
+	}
+
+}
