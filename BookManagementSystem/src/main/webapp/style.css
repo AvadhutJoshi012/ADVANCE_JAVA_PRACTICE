@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/* General Page Styling */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Heading */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Form Container */
+form {
+    width: 400px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+form label {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    background: #4A90E2;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #357ABD;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+table th {
+    background: #4A90E2;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+table tr:hover {
+    background: #f1f7ff;
+}
+
+/* Links */
+a {
+    display: block;
+    width: 200px;
+    margin: 15px auto;
+    text-align: center;
+    padding: 10px;
+    background: #5C6BC0;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    background: #3949AB;
+}
+
+.edit-btn {
+    background: #4CAF50;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.edit-btn:hover {
+    background: #3e8e41;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
