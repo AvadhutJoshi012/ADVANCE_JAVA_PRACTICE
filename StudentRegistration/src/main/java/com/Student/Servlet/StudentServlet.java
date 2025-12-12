@@ -1,4 +1,4 @@
-package com.Student;
+package com.Student.Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
